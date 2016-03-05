@@ -6,34 +6,72 @@ class JuniorProfile extends React.Component {
     super();
 
     this.state = {
-      junior_profile: []
+      user: [],
+      skills: [
+          "coffeescript",
+          "cplusplus",
+          "csharp",
+          "java",
+          "javascript",
+          "jquery",
+          "net",
+          "node",
+          "php",
+          "rails",
+          "react",
+          "ruby"
+      ],
+      skill_set: []
     }
   }
 
-  renderProfile(){
+  componentWillMount(){
     let component = this;
 
-    jQuery.getJSON(`https://powerful-waters-75833.herokuapp.com//junior_profiles/${this.props.params.profileId}.json`, function(data){
-      console.log("Getting the junior profile...");
+    jQuery.ajax({
+      method: "GET",
+      url: `https://powerful-waters-75833.herokuapp.com//junior_profiles/${this.props.params.profileId}.json`
+    }).done(function(data){
       console.log(data);
-      component.setState({
-        junior_profile: data.junior_profile
+      var skillz = [];
+
+      component.state.skills.forEach(function(skill){
+        if(data.junior_profile[skill]){
+          skillz.push(skill);
+        }
       })
+
+      component.setState({
+        user:{
+              id: data.junior_profile.id,
+              email: data.junior_profile.email,
+              name: data.junior_profile.name,
+              city: data.junior_profile.city,
+              skill_set: skillz
+        }
+      });
+    }).fail(function(data){
+      console.log(data);
     })
 
-  }
 
-  componentDidMount(){
-    this.renderProfile();
-    console.log(this.state.junior_profile);
   }
 
   render(){
     return(
       <div>
-        <h1>{this.state.junior_profile.name}</h1>
-        <p>{this.state.junior_profile.city}</p>
-        <p>Ruby: {this.state.junior_profile.ruby}</p>
+        <h1>{this.state.user.name}</h1>
+        <p>{this.state.user.city}</p>
+
+        <section id="skills">
+        <h3>My skills<br />
+          {this.state.user.skill_set.map(function(skill, i) {
+            return(
+                <span key={i} className="label label-danger">{skill}</span>
+            );
+            })}
+            </h3>
+        </section>
       </div>
     );
   }
