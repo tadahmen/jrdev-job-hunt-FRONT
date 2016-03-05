@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-
 class Navigation extends React.Component{
   constructor(){
     super();
@@ -10,9 +9,9 @@ class Navigation extends React.Component{
   render(){
     return(
       <nav>
-        <span><a href="https://powerful-waters-75833.herokuapp.com/companies/edit">Edit Your Account</a> </span>
-        <span><Link to={`/company_profiles`}>Company Profiles</Link> </span>
-        <span><Link to={`/junior_profiles`}>Junior Profiles</Link> </span>
+        <Link to={`/account/1`}>Your Account</Link>
+        <Link to={`/company_profiles`}>Company Profiles</Link>
+        <Link to={`/junior_profiles`}>Junior Profiles</Link>
       </nav>
     );
   }
