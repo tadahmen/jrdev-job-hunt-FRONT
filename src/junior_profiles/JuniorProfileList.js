@@ -34,7 +34,7 @@ class JuniorProfileList extends React.Component {
 
         {this.state.junior_profiles.map(function(junior_profile, i) {
           return(
-            <div key={i}>
+            <div className="well" key={i}>
               <h2><Link to={`/junior_profiles/${junior_profile.id}`}>{junior_profile.name}</Link></h2>
               <p>{junior_profile.city}</p>
             </div>

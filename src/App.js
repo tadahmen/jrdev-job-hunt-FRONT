@@ -16,6 +16,11 @@ class App extends React.Component {
         <div className="container">
           {this.props.children}
         </div>
+        <footer className="footer">
+          <div className="container">
+            <p className="text-muted">© 2016 Codaisseur • Made with ♥ in ✖✖✖</p>
+          </div>
+        </footer>
       </div>
     );
   }

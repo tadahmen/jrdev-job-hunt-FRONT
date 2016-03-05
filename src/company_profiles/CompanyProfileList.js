@@ -34,7 +34,7 @@ class CompanyProfileList extends React.Component {
 
         {this.state.company_profiles.map(function(company_profile, i) {
           return(
-            <div key={i}>
+            <div key={i} className="well">
               <h2><Link to={`/company_profiles/${company_profile.id}`}>{company_profile.name}</Link></h2>
               <p>{company_profile.description}</p>
               <p>
