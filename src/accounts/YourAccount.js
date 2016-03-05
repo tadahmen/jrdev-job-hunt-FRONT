@@ -67,7 +67,6 @@ class YourAccount extends React.Component{
           <p>City: {this.state.user.city}</p>
         </section>
         <section id="skills">
-        {console.log(this.state.user.skill_set)}
         <h3>My skills</h3>
         <ul>
           {this.state.user.skill_set.map(function(skill, i) {
