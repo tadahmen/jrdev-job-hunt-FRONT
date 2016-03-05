@@ -30,6 +30,12 @@ class JuniorList extends React.Component {
     return(
       <div>
         <h1>JuniorList</h1>
+        
+        {this.state.junior_profiles.map(function(junior_profile, i) {
+          return(
+            <p>{junior_profile.name}</p>
+          );
+        })}
       </div>
     );
   }
