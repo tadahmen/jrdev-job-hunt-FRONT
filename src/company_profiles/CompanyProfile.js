@@ -13,7 +13,7 @@ class CompanyProfile extends React.Component {
   renderProfile(){
     let component = this;
 
-    jQuery.getJSON(`https://powerful-waters-75833.herokuapp.com/company_profiles/${this.props.params.profileId}.json`, function(data){
+    jQuery.getJSON(`https://developme.herokuapp.com/company_profiles/${this.props.params.profileId}.json`, function(data){
       console.log("Getting the company profile...");
       console.log(data);
       component.setState({

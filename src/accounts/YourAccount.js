@@ -30,7 +30,7 @@ class YourAccount extends React.Component{
 
     jQuery.ajax({
       method: "GET",
-      url: "https://powerful-waters-75833.herokuapp.com/junior_profiles/1.json"
+      url: "https://developme.herokuapp.com/junior_profiles/1.json"
     }).done(function(data){
       console.log(data);
       var skillz = [];
