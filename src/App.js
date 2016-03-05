@@ -26,12 +26,12 @@ class App extends React.Component {
   //   }).fail(function(data){
   //     console.log(data);
   //   })
-  }
+  // }
 
   render() {
     return (
       <div>
-            <Navigation />
+        <Navigation />
         {this.props.children}
       </div>
     );

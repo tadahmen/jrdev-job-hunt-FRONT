@@ -1,7 +1,7 @@
 import React from 'react';
 import jQuery from 'jquery';
 
-class JuniorList extends React.Component {
+class JuniorProfileList extends React.Component {
   constructor(){
     super();
 
@@ -30,7 +30,7 @@ class JuniorList extends React.Component {
     return(
       <div>
         <h1>JuniorList</h1>
-        
+
         {this.state.junior_profiles.map(function(junior_profile, i) {
           return(
             <p>{junior_profile.name}</p>
@@ -41,4 +41,4 @@ class JuniorList extends React.Component {
   }
 }
 
-export default JuniorList;
+export default JuniorProfileList;
