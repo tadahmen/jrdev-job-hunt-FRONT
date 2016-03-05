@@ -9,10 +9,21 @@ class Navigation extends React.Component{
 
   render(){
     return(
-      <nav>
-        <span><Link to={`/company_profiles`}>Company Profiles</Link> </span>
-        <span><Link to={`/junior_profiles`}>Junior Profiles</Link> </span>
-      </nav>
+
+        <nav className="navbar navbar-default">
+          <div className="container">
+            <div className="navbar-header">
+              <Link to="/" className="navbar-brand">DevelopMe</Link>
+            </div>
+            <ul className="nav navbar-nav">
+              <li><Link to="/">Home</Link></li>
+              <li><Link to={`/junior_profiles`}>Juniors</Link></li>
+            </ul>
+            <ul className="nav navbar-nav navbar-right">
+              <li><Link to="#">My profile</Link></li>
+            </ul>
+          </div>
+        </nav>
     );
   }
 }

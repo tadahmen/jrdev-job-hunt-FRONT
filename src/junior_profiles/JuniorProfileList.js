@@ -30,11 +30,14 @@ class JuniorProfileList extends React.Component {
   render(){
     return(
       <div>
-        <h1>JuniorList</h1>
+        <h1>Juniors</h1>
 
         {this.state.junior_profiles.map(function(junior_profile, i) {
           return(
-            <p><Link to={`/junior_profiles/${junior_profile.id}`}>{junior_profile.name}</Link></p>
+            <div key={i}>
+              <h2><Link to={`/junior_profiles/${junior_profile.id}`}>{junior_profile.name}</Link></h2>
+              <p>{junior_profile.city}</p>
+            </div>
           );
         })}
       </div>

@@ -30,7 +30,7 @@ class CompanyProfileList extends React.Component {
   render(){
     return(
       <div>
-        <h1>CompanyList</h1>
+        <h1>Companies</h1>
 
         {this.state.company_profiles.map(function(company_profile, i) {
           return(

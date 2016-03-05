@@ -1,5 +1,6 @@
 import React from 'react';
 import jQuery from 'jquery';
+import './stylesheets/components.scss';
 import Navigation from './Navigation';
 
 class App extends React.Component {
@@ -32,7 +33,9 @@ class App extends React.Component {
     return (
       <div>
         <Navigation />
-        {this.props.children}
+        <div className="container">
+          {this.props.children}
+        </div>
       </div>
     );
   }

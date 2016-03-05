@@ -32,8 +32,8 @@ class CompanyProfile extends React.Component {
         <h1>{this.state.company_profile.name}</h1>
         <p>{this.state.company_profile.description}</p>
         <p>
-          <strong>Size:</strong> {this.state.company_profile.size} |
-          <strong>Salary indication:</strong> {this.state.company_profile.salary_indication} |
+          <strong>Size:</strong> {this.state.company_profile.size}<br />
+          <strong>Salary indication:</strong> {this.state.company_profile.salary_indication}<br />
           <strong>Jr/Sr ratio:</strong> {this.state.company_profile.jr_sr_ratio}
         </p>
       </div>
