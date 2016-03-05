@@ -30,7 +30,7 @@ class JuniorProfile extends React.Component {
 
     jQuery.ajax({
       method: "GET",
-      url: `https://powerful-waters-75833.herokuapp.com//junior_profiles/${this.props.params.profileId}.json`
+      url: `https://developme.herokuapp.com//junior_profiles/${this.props.params.profileId}.json`
     }).done(function(data){
       console.log(data);
       var skillz = [];

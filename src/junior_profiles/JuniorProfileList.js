@@ -14,7 +14,7 @@ class JuniorProfileList extends React.Component {
   reloadList(event) {
     let component = this;
 
-    jQuery.getJSON("https://powerful-waters-75833.herokuapp.com/junior_profiles", function(data){
+    jQuery.getJSON("https://developme.herokuapp.com/junior_profiles", function(data){
       console.log("Getting junior profile list...");
       console.log(data);
       component.setState({

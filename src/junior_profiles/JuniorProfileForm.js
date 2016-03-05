@@ -43,7 +43,7 @@ class JuniorProfileForm extends React.Component {
 
     jQuery.ajax({
       type: "POST",
-      url: `https://powerful-waters-75833.herokuapp.com/junior_profiles`,
+      url: `https://developme.herokuapp.com/junior_profiles`,
       data: JSON.stringify({
           profile: newJuniorProfile
       }),

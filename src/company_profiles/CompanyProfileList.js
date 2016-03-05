@@ -14,7 +14,7 @@ class CompanyProfileList extends React.Component {
   reloadList(event) {
     let component = this;
 
-    jQuery.getJSON("https://powerful-waters-75833.herokuapp.com/company_profiles.json", function(data){
+    jQuery.getJSON("https://developme.herokuapp.com/company_profiles.json", function(data){
       console.log("Getting company profile list...");
       console.log(data);
       component.setState({
