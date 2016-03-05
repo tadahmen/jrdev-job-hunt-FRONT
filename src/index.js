@@ -5,7 +5,6 @@ import App from './App';
 import CompanyAccount from './companies/CompanyAccount';
 import CompanyProfile from './company_profiles/CompanyProfile';
 
-
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
