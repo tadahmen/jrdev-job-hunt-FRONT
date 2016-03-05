@@ -10,7 +10,6 @@ class Navigation extends React.Component{
   render(){
     return(
       <nav>
-        <span><a href="https://powerful-waters-75833.herokuapp.com/companies/edit">Edit Your Account</a> </span>
         <span><Link to={`/company_profiles`}>Company Profiles</Link> </span>
         <span><Link to={`/junior_profiles`}>Junior Profiles</Link> </span>
       </nav>

@@ -1,5 +1,6 @@
 import React from 'react';
 import jQuery from 'jquery';
+import { Link } from 'react-router';
 
 class JuniorProfileList extends React.Component {
   constructor(){
@@ -13,7 +14,7 @@ class JuniorProfileList extends React.Component {
   reloadList(event) {
     let component = this;
 
-    jQuery.getJSON("http://localhost:8888/junior_profiles", function(data){
+    jQuery.getJSON("https://powerful-waters-75833.herokuapp.com/junior_profiles", function(data){
       console.log("Getting junior profile list...");
       console.log(data);
       component.setState({
@@ -33,7 +34,7 @@ class JuniorProfileList extends React.Component {
 
         {this.state.junior_profiles.map(function(junior_profile, i) {
           return(
-            <p>{junior_profile.name}</p>
+            <p><Link to={`/junior_profiles/${junior_profile.id}`}>{junior_profile.name}</Link></p>
           );
         })}
       </div>
