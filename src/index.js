@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory } from 'react-router';
 import App from './App';
-import CompanyAccount from './companies/CompanyAccount';
 import CompanyProfileList from './company_profiles/CompanyProfileList';
 import CompanyProfile from './company_profiles/CompanyProfile';
 import JuniorProfileList from './junior_profiles/JuniorProfileList';
