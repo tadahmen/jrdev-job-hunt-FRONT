@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-
 class Navigation extends React.Component{
   constructor(){
     super();
@@ -9,21 +8,20 @@ class Navigation extends React.Component{
 
   render(){
     return(
-
-        <nav className="navbar navbar-default">
-          <div className="container">
-            <div className="navbar-header">
-              <Link to="/" className="navbar-brand">DevelopMe</Link>
-            </div>
-            <ul className="nav navbar-nav">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to={`/junior_profiles`}>Juniors</Link></li>
-            </ul>
-            <ul className="nav navbar-nav navbar-right">
-              <li><Link to="#">My profile</Link></li>
-            </ul>
+      <nav className="navbar navbar-default">
+        <div className="container">
+          <div className="navbar-header">
+            <Link to="/" className="navbar-brand">DevelopMe</Link>
           </div>
-        </nav>
+          <ul className="nav navbar-nav">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to={`/junior_profiles`}>Juniors</Link></li>
+          </ul>
+          <ul className="nav navbar-nav navbar-right">
+            <li><Link to={`/account/1`}>Your Account</Link></li>
+          </ul>
+        </div>
+      </nav>
     );
   }
 }
