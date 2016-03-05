@@ -63,22 +63,20 @@ class YourAccount extends React.Component{
         <h1>Your Account</h1>
         <h2>{this.state.user.name}</h2>
         <section id="info">
-          <p>{this.state.user.email}</p>
-          <p>{this.state.user.city}</p>
+          <p>Email: {this.state.user.email}</p>
+          <p>City: {this.state.user.city}</p>
         </section>
         <section id="skills">
         {console.log(this.state.user.skill_set)}
+        <h3>My skills</h3>
         <ul>
           {this.state.user.skill_set.map(function(skill, i) {
             return(
-                <ul>
-                  <li>{skill}</li>
-                </ul>
+                <li>{skill}</li>
             );
             })}
           </ul>
         </section>
-
       </div>
     );
   }
