@@ -15,6 +15,8 @@ class CompanyProfileList extends React.Component {
     let component = this;
 
     jQuery.getJSON("http://localhost:8888/company_profiles.json", function(data){
+      console.log("Getting company profile list...");
+      console.log(data);
       component.setState({
         company_profiles: data
       });
