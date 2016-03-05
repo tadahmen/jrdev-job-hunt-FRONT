@@ -13,9 +13,9 @@ class CompanyProfile extends React.Component {
   renderProfile(){
     let component = this;
 
-    jQuery.getJSON(`https://powerful-waters-75833.herokuapp.com/company_profiles/${this.props.params.profileId}.json`, function(data){
+    jQuery.getJSON(`http://localhost:8888/company_profiles/${this.props.params.profileId}.json`, function(data){
+      console.log("Getting the company profile...");
       console.log(data);
-      console.log("getting a profile");
       component.setState({
         company_profile: data.company_profile
       })
@@ -31,6 +31,11 @@ class CompanyProfile extends React.Component {
       <div>
         <h1>{this.state.company_profile.name}</h1>
         <p>{this.state.company_profile.description}</p>
+        <p>
+          <strong>Size:</strong> {this.state.company_profile.size} |
+          <strong>Salary indication:</strong> {this.state.company_profile.salary_indication} |
+          <strong>Jr/Sr ratio:</strong> {this.state.company_profile.jr_sr_ratio}
+        </p>
       </div>
     );
   }

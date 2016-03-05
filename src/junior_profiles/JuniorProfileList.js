@@ -14,7 +14,7 @@ class JuniorProfileList extends React.Component {
     let component = this;
 
     jQuery.getJSON("http://localhost:8888/junior_profiles", function(data){
-      // doesn't get the data yet. Because of login?
+      console.log("Getting junior profile list...");
       console.log(data);
       component.setState({
         junior_profiles: data.junior_profiles
