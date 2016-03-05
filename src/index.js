@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 import App from './App';
 import YourAccount from './accounts/YourAccount';
 import CompanyProfileList from './company_profiles/CompanyProfileList';
@@ -11,8 +11,9 @@ import JuniorProfile from './junior_profiles/JuniorProfile';
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={App} >
+      <IndexRoute component={CompanyProfileList} />
       <Route path="/account/:id" component={YourAccount} />
-      <Route path="/company_profiles" component={CompanyProfileList} />
+      <Route path="/company_profiles/:profileId" component={CompanyProfile} />
       <Route path="/junior_profiles" component={JuniorProfileList} />
       <Route path="/junior_profiles/:profileId" component={JuniorProfile} />
     </Route>
