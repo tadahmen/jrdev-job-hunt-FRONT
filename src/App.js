@@ -26,16 +26,16 @@ class App extends React.Component {
   //   }).fail(function(data){
   //     console.log(data);
   //   })
-  }
+  // }
 
-    render() {
-        return (
-          <div>
-            <Navigation />
-            {this.props.children}
-          </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <Navigation />
+        {this.props.children}
+      </div>
+    );
+  }
 }
 
 export default App;
